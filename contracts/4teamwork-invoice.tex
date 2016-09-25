@@ -1,0 +1,35 @@
+% Copy this template to create a new invoice.
+%
+\documentclass[SN,11pt,enlargefirstpage=true,sps]{scrlttr2}
+\usepackage{rechnung}
+
+% Specify the invoice date (day, month, year)
+\newdate{invoicedate}{25}{09}{2016}
+
+% If you create multiple invoices on a single day,
+% increase this counter for each invoice.
+\setkomavar{invoicenr}{1}
+
+% Set your signature here
+\setkomavar{signature}{Denis Krienbühl, Secretary}
+
+\begin{document}
+
+\begin{letter}{4Teamwork\\Dammweg 9\\3013 Bern}
+
+  \opening{Dear Sponsor,}
+
+  This is the invoice for your Platinum Sponsorship plan for the Swiss Python Summit 2017.
+
+  \begin{invoice}{0.0}% No VAT?
+    % Add your items here (description, price, count)
+        \Fee{Platinum Sponsorship}{2000}{1}
+  \end{invoice}
+
+  Payment terms: 30 days.
+
+  \closing{\\Thanks again for your support!}
+
+\end{letter}
+
+\end{document}
